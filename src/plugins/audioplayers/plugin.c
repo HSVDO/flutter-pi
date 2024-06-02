@@ -62,6 +62,7 @@ static int on_local_method_call(char *channel, struct platch_obj *object, Flutte
 
     player = audioplayers_linux_plugin_get_player(player_id, mode);
     if (player == NULL) {
+        LOG_ERROR("Error: Player is null!\n");
         return platch_respond_native_error_std(responsehandle, ENOMEM);
     }
 
