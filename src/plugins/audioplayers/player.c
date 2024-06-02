@@ -337,13 +337,13 @@ void audio_player_on_position_update(struct audio_player *self) {
         return;
     }
     // clang-format off
-//    platch_send_success_event_std(
-//        self->event_channel_name,
-//        &STDMAP2(
-//            STDSTRING("event"), STDSTRING("audio.onCurrentPosition"),
-//            STDSTRING("value"), STDINT64(audio_player_get_position(self))
-//        )
-//    );
+    platch_send_success_event_std(
+        self->event_channel_name,
+        &STDMAP2(
+            STDSTRING("event"), STDSTRING("audio.onCurrentPosition"),
+            STDSTRING("value"), STDINT64(audio_player_get_position(self))
+        )
+    );
     // clang-format on
 }
 
